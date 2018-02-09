@@ -1,0 +1,7 @@
+description = "Unicode text datastructure for OCaml"
+version = "%%VERSION_NUM%%"
+requires = ""
+archive(byte) = "utext.cma"
+archive(native) = "utext.cmxa"
+plugin(byte) = "utext.cma"
+plugin(native) = "utext.cmxs"

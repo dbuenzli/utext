@@ -1,0 +1,27 @@
+opam-version: "1.2"
+maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
+authors: ["The utext programmers"]
+homepage: "http://erratique.ch/software/utext"
+doc: "http://erratique.ch/software/utext/doc"
+license: "ISC"
+dev-repo: "http://erratique.ch/repos/utext.git"
+bug-reports: "https://github.com/dbuenzli/utext/issues"
+tags: []
+available: [ ocaml-version >= "4.01.0"]
+depends:
+[
+  "ocamlfind" {build}
+  "ocamlbuild" {build}
+  "topkg" {build & >= "0.9.0"}
+  "pvec"
+  "uutf"
+  "uucp"
+  "uunf"
+  "uuseg"
+]
+depopts: []
+build:
+[[
+  "ocaml" "pkg/pkg.ml" "build"
+          "--dev-pkg" "%{dev}%"
+]]
